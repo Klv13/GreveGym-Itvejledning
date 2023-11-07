@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GG-itvejledning</title>
+    <!--Nogle elementer er lavet selv, andre med bootstrap.-->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
 </head>
@@ -11,27 +12,27 @@
 
     <div class="main">
         <div class="jumbotron text-center bg-3 header bg-gradient">
-            <h1 class="color-1">Greve Gymnasiums IT-Kontor</h1>
+            <h1 class="color-1 display-1">Greve Gymnasiums IT-Kontor</h1>
             <h2 class="color-4">Lorem ipsum dolor sit amet</h2>
         </div>
         <nav class="navbar bg-2" >
             <div class="container-fluid">
-              <a class="navbar-brand nav-link" href="#">
+              <a class="navbar-brand nav-link" href="#vejledere">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 IT-vejledere
               </a>
             </div>
           </nav>
         
-        <div class="text-center header">
+        <div class="text-center header hoverfly">
             <div class="jumbotron text-center bg-3 bg-gradient">
-                <h2 class="manchet">Greve Gymnasiums IT-Vejledere</h2>
+                <h2 class="manchet" id="vejdledere">Greve Gymnasiums IT-Vejledere</h2>
             </div>
             <img src="billeder/Billede_karusel/Skærmbillede 2023-11-07 194731.png" alt="Billede af It vejdledere" class="fallesbillede">
 
         </div>
         
-        <div class="text-center header bg-1">
+        <div class="text-center header bg-1 hoverfly">
             <div class="jumbotron text-center bg-3 bg-gradient">
                 <h2 class="manchet">Ny på Greve Gymnasium?</h2>
             </div>
@@ -40,7 +41,8 @@
             <p>Du kan finde dokumentet <a href="https://drive.google.com/file/d/1idfgAoL11MyxRwOMdGzzexw_I-X4h_br/view" target="_blank">her</a></p>
 
         </div>
-        <div class="text-center header bg-1">
+        
+        <div class="text-center header bg-1 hoverfly">
             <div class="jumbotron text-center bg-3 bg-gradient">
                 <h2 class="manchet">IT-Vejledningens åbningstider</h2>
             </div>
@@ -62,11 +64,14 @@
 
 
 
-
+    <!--Det her er chatbottens kode. Ikke rør ved scripts. Alt under botpressWebChat.Init kan ændres. Tjek botpress api først-->
 
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
  
     <script>
+
+        //Det er her forskellige parameter omkring botten bliver bestemt fra. Kig i Botpress docs for mere information
+
         window.botpressWebChat.init({
             // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
             "botId": "6faf322c-9834-428e-a52d-a7de51856915",
@@ -89,11 +94,12 @@
 
             // Hide the widget and disable animations
             "hideWidget": false,
-            "disableAnimations": true,
+            "disableAnimations": false,
         });
      
         // Opens up the Chatbot by default
         // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+        //If statement bliver brugt for at tjekke som skærmen er stor nok til at åbne botten med det samme. 1440 er Pixels bred
         if (window.innerWidth > 1440) {
             window.botpressWebChat.onEvent(
             function () {
