@@ -1,3 +1,9 @@
+//Tilføj normal js her
+
+
+
+
+
 //Det er her forskellige parameter omkring botten bliver bestemt fra. Kig i Botpress docs for mere information
 
 window.botpressWebChat.init({
