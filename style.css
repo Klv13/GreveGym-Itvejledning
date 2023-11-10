@@ -20,6 +20,8 @@ h2{
     filter: drop-shadow(0 0 3rem rgb(0, 0, 0));
     transform: scale(1.1);
 }
+
+/*Nav link animation*/
 .nav-link{
     text-decoration: none;
     transition: all 0.3s ease;
@@ -28,6 +30,9 @@ h2{
     text-decoration: underline;
     transform: scale(1.1);
 }
+
+
+/*Sørger for at skabe en svæve animation*/
 .hoverfly{
     
     transition: all 0.3s ease;
@@ -36,6 +41,8 @@ h2{
     filter: drop-shadow(0 0 3rem rgb(0, 0, 0));
     transform: scale(1.1);
 }
+
+
 .manchet{
     padding-top: 1%;
 }
